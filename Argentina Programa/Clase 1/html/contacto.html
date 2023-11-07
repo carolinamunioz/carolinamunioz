@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Contacto | Seguro No Pagamos</title>
+</head>
+<body>
+    <header class="encabezado">
+        <h1 class="container encabezado__title">Seguro No Pagamos Cooperativa</h1>
+    </header>
+    <body>
+        <section class="container">
+            <div class="contacto">
+
+                <h1 class="contacto__title">CONTACTO</h1>
+                <h3 class="contacto__text">Completa el formulario para enviarnos tu consulta</h3>
+                <div class="formulario">
+                    <form action="javascript:;" onsubmit="enviar(this)">
+                        <div class="formulario__linea">
+                            <label for="name" class="formulario__label">Nombre:</label>
+                            <input name="name" id="name" type="text" placeholder="John" required>
+                        </div>
+                        <div class="formulario__linea">
+                            <label for="name" class="formulario__label">Apellido:</label>
+                            <input name="apellido" id="apellido" type="text" placeholder="Doe" required>
+                        </div>
+                        <div class="formulario__linea">
+                            <label for="dni" class="formulario__label">DNI:</label>
+                            <input name="dni" id="dni" type="number" placeholder="22333444" required>
+                        </div>
+                        <div class="formulario__linea">
+                            <label for="email" class="formulario__label">Email:</label>
+                            <input name="email" id="email" type="email"
+                                pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                                title="Debe ser un formato correcto de email" placeholder="johndoe@correo.com" required>
+                        </div>
+                        <div class="formulario__linea">
+                            <label for="telefono" class="formulario__label">Teléfono:</label>
+                            <input class="item__input" name="telefono" id="telefono" type="number" placeholder="1122334455" required>
+                        </div>
+                        <div class="formulario__linea">
+                            <label for="tipoSeguro" class="formulario__label">Tipo de Seguro:</label>
+                            <select name="tipoSeguro" id="tipoSeguro" onchange="actualizarMonto()">
+                                <option value="Seleccionar">Seleccionar</option>
+                                <option value="basico">Básico</option>
+                                <option value="intermedio">Intermedio</option>
+                                <option value="premium">Premium</option>
+                            </select>
+                        </div>
+                        <div class="formulario__linea monto">
+                            <label for="monto" class="formulario__label">Monto:</label>
+                            <p class="formulario__monto" id="monto">Seleccionar Tipo de Seguro</p>
+                        </div>
+                        <div class="formulario__enviar">
+                            <button class="formulario__boton" type="submit">Enviar</button>
+                            <button class="formulario__boton" onclick="resetForm()">Limpiar Form</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+    <footer>
+
+    </footer>
+    <script src="../js/contacto.js"></script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Calculadora | Clase 2 - Argentina Programa</title>
+</head>
+<body>
+    <header class="encabezado">
+        <h1 class="container encabezado__title">Clase 2 - Argentina Programa</h1>
+    </header>
+    <body>
+        <section class="container">
+            <form action="javascript:;">
+                <div class="calculadora">
+                    <h1 class="calculadora__title">CALCULADORA</h1>
+                    <h3 class="calculadora__text">Ingrese dos números y seleccione la operación a realizar</h3>
+                    <div class="calculadora__linea">
+                        <label for="argumento1" class="calculadora__label">Primer argumento:</label>
+                        <input name="arg1" id="arg1" type="number" placeholder="12345" required>
+                    </div>
+                    <div class="calculadora__linea">
+                        <label for="argumento2" class="calculadora__label">Segundo Argumento:</label>
+                        <input name="arg2" id="arg2" type="number" placeholder="12345" required>
+                    </div>
+                    <h3 class="calculadora__text">Seleccione la operación a realizar:</h3>
+                    <div class="calculadora__enviar">
+                        <button class="calculadora__boton" onclick="operar('sumar')">Suma</button>
+                        <button class="calculadora__boton" onclick="operar('restar')">Resta</button>
+                        <button class="calculadora__boton" onclick="operar('multiplicar')">Multiplicación</button>
+                        <button class="calculadora__boton" onclick="operar('dividir')">División</button>
+                    </div>
+                    <br>
+                    <div class="calculadora__linea">
+                        <label for="resultado" class="calculadora__label">Resultado:</label>
+                        <p class="calculadora__label" id="resultado" type="number" placeholder="12345">Resultado de la operación</p>
+                    </div>
+                    <div class="calculadora__enviar">
+                        <button class="calculadora__boton" onclick="resetCalculadora()">Reset calculadora</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </body>
+    <footer>
+
+    </footer>
+    <script src="../js/calculadora.js"></script>
+</html>
